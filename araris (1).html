@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آرریس</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=B+Nazanin&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'B Nazanin', serif;
+      background: linear-gradient(to bottom, #1a1a1a, #3b2f2f);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Gulzar', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.3rem; /* کاهش از 0.5rem به 0.3rem (~15px به ~5px) */
+      color: #ffffff;
+    }
+
+    h2 {
+      font-family: 'Gulzar', cursive;
+      font-size: 1.5rem; /* کاهش 25 درصدی از 2rem (32px به 24px) */
+      margin-top: 0.6rem; /* اضافه کردن margin-top برای کنترل بهتر فاصله */
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #ffffff;
+      font-family: 'B Nazanin', serif;
+      font-weight: normal; /* یکسان سازی ضخامت متن */
+    }
+
+    .session {
+      margin-top: 2rem;
+      background-color: #2e2e2e;
+      padding: 1rem;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .id-box {
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px 0;
+      font-family: monospace;
+      user-select: all;
+      direction: ltr;
+      word-break: break-all;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    .full-link {
+      color: #7aa2f7;
+      text-decoration: none;
+    }
+
+    .full-link:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      font-family: 'B Nazanin', serif;
+      font-weight: normal; /* حذف بولد بودن */
+    }
+  </style>
+</head>
+<body>
+  <h1>آرریس</h1>
+  <h2>سمفونی علم و هنر</h2>
+
+  <div class="session">
+    <p>برای ارتباط با ما، <strong>لازم است</strong> پیام‌رسان <strong>Session</strong> را نصب کنید.</p>
+    <a class="full-link" href="https://getsession.org/" target="_blank">
+      لینک دانلود پیام‌رسان Session از سایت رسمی‌اش
+    </a>
+    <p>آیدی ما در Session:</p>
+    <div id="sessionID" class="id-box">0594079094edf047fe10574e933809d05f6d60a8c6c057e04a9a1377b4e1780705</div>
+    <button onclick="copySessionID()">کپی آیدی</button>
+  </div>
+
+  <script>
+    function copySessionID() {
+      const id = document.getElementById("sessionID").innerText;
+      navigator.clipboard.writeText(id).then(() => {
+        alert("آیدی کپی شد!");
+      });
+    }
+  </script>
+</body>
+</html>
